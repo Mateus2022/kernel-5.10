@@ -10,7 +10,7 @@ export KBUILD_BUILD_USER="fjrXTR"
 git clone --depth=1 https://github.com/kdrag0n/proton-clang "${HOME}/clang-proton"
 
 rm -rf AnyKernel
-make O=out ARCH=arm64 rosemary_defconfig
+make O=out ARCH=arm64 gki_defconfig
 
 PATH="${HOME}/clang-proton/bin:${PATH}" \
 make -j20 O=out \
@@ -31,8 +31,8 @@ function zupload()
 git clone --depth=1 https://github.com/fjrXTR/AnyKernel3.git -b master AnyKernel
 cp out/arch/arm64/boot/Image.gz AnyKernel
 cd AnyKernel
-zip -r9 sphinXkernel-fern!-rosemary-v1.0-svendor.zip *
-curl -T sphinXkernel-fern!-rosemary-v1.0-svendor.zip oshi.at
+zip -r9 sphinXkernel-fern!-5.10-v1.0-svendor.zip *
+curl -T sphinXkernel-fern!-5.10-v1.0-svendor.zip oshi.at
 }
 
 compile
